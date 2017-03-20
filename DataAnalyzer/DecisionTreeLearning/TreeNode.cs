@@ -10,6 +10,7 @@ namespace decision_tree_learning
 		private Attribute attribute;
 		private string type;
 		private string target; 
+		private Dictionary<string, double> distribution;
 
 		public TreeNode ()
 		{
@@ -27,6 +28,16 @@ namespace decision_tree_learning
 		{
 			type = "leaf";
 			this.target = target;
+		}
+
+		public void SetDistribution (Dictionary<string, double> distri)
+		{
+			distribution = distri;
+		}
+
+		public Dictionary<string, double> GetDistribution()
+		{
+			return distribution;
 		}
 
 		public void AddChild(string name, TreeNode child)

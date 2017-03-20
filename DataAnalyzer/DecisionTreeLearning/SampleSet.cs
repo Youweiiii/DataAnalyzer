@@ -74,13 +74,21 @@ namespace decision_tree_learning
 			trainingData = newData;
 		}
 
-		public void SplitData(int trainPercent = 70, int prunePercent = 30)
+		public void SplitDataForPruning(int trainPercent = 70, int prunePercent = 30)
 		{
 			Shuffle();
 
 			prunePercent = 100 - trainPercent;
 			pruningData = trainingData.GetRange(0, trainingData.Count * prunePercent / 100);
 			trainingData = trainingData.GetRange(pruningData.Count, trainingData.Count - pruningData.Count);
+		}
+
+		public void SplitDataForTesting(int testPrecent = 20)
+		{
+			Shuffle();
+
+			testingData = trainingData.GetRange(0, trainingData.Count * testPrecent / 100);
+			trainingData = trainingData.GetRange(testingData.Count, trainingData.Count - testingData.Count);
 		}
 
 		public List<DataPoint> GetTrainingData()

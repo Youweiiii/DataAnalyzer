@@ -66,20 +66,32 @@ namespace decision_tree_learning
 		{
 			TreeNode curr = root;
 			while (!curr.GetType ().Equals ("leaf")) {
-				if (curr.GetAttribute ().GetType ().Equals ("discrete")) {
-					string attributeValue = example.GetValues () [curr.GetAttribute ().GetName ()];
-					curr = curr.GetChildren () [attributeValue];
+				string attributeValue = "";
+				if (example.GetValues () [curr.GetAttribute ().GetName ()].Equals ("")) {
+					Random rand = new Random ();
+					double num = rand.NextDouble ();
+					Dictionary<string, double> distribution = curr.GetDistribution ();
+					foreach (string value in distribution.Keys) {
+						attributeValue = value;
+						num = num - distribution [value];
+						if (num < 0)
+							break;
+					}
+//					Console.WriteLine ("missing value in test: " + attributeValue);
 				} else {
-					string key = curr.GetChildren ().Keys.ToList() [0];
-					double threshold = Convert.ToDouble (key.Split (' ') [1]);
-					string attributeValue;
-					if (Convert.ToDouble (example.GetAttributeValue (curr.GetAttribute ().GetName ())) > threshold)
-						attributeValue = "more ";
-					else
-						attributeValue = "less ";
-					attributeValue = attributeValue + threshold;
-					curr = curr.GetChildren () [attributeValue];
+					if (curr.GetAttribute ().GetType ().Equals ("discrete")) {
+						attributeValue = example.GetValues () [curr.GetAttribute ().GetName ()];
+					} else {
+						string key = curr.GetChildren ().Keys.ToList() [0];
+						double threshold = Convert.ToDouble (key.Split (' ') [1]);
+						if (Convert.ToDouble (example.GetAttributeValue (curr.GetAttribute ().GetName ())) > threshold)
+							attributeValue = "more ";
+						else
+							attributeValue = "less ";
+						attributeValue = attributeValue + threshold;
+					}
 				}
+				curr = curr.GetChildren () [attributeValue];
 			}
 			return curr.GetTarget ();
 		}

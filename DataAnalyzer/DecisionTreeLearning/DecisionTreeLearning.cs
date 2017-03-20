@@ -32,7 +32,7 @@ namespace decision_tree_learning
 			attributes.RemoveAt(attributes.Count - 1);
 			sampleset.SetAttributes(attributes);
 			if (isPruning)
-				sampleset.SplitData();
+				sampleset.SplitDataForPruning();
 			
 			Classifier classifier = new Classifier(sampleset, isPruning);
 			classifier.CalculateAccuracy();

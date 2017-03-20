@@ -7,7 +7,8 @@ namespace decision_tree_learning
 	public class DataPoint
 	{
 		private string target;
-		public  Dictionary<string, string> values;
+		private Dictionary<string, string> values;
+
 		public DataPoint ()
 		{
 			values = new Dictionary<string, string> ();
@@ -16,16 +17,29 @@ namespace decision_tree_learning
 		public DataPoint(List<Attribute> attributes, string data)
 		{
 			values = new Dictionary<string, string> ();
+			AddDataInfo (attributes, data);
+		}
+
+		public bool AddDataInfo(List<Attribute> attributes, string data)
+		{
+			bool success = true;
 			string[] array = data.Split (','); 
 
 			for (int i = 0; i < attributes.Count - 1; i++) {
+				if (array[i].Trim().Equals(""))
+					success = false;
 				values.Add (attributes[i].GetName(), array [i].Trim());
 			}
 
-			if (attributes.Count == array.Length)
-				target = array.Last();
+			if (attributes.Count == array.Length) {
+				target = array.Last ();
+				if (target.Equals (""))
+					success = false;
+			}
 			else
 				target = "";
+
+			return success;
 		}
 
 		public Dictionary<string, string> GetValues() 

@@ -52,8 +52,10 @@ namespace decision_tree_learning
 						while ((line = sr.ReadLine ()) != null) {
 							if (line == "")
 								continue;
-							DataPoint example = new DataPoint(attributes, line);
-							examples.Add(example);
+							DataPoint example = new DataPoint();
+							bool success = example.AddDataInfo(attributes, line);
+							if (success || isTestingFile)
+								examples.Add(example);
 						}
 						break;
 					}

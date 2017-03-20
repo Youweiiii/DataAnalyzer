@@ -51,6 +51,7 @@ namespace decision_tree_learning
 				else
 					leaf = GetMajorityTarget(examples);
 				TreeNode leafNode = new TreeNode(leaf);
+
 				return leafNode;
 			}
 			
@@ -78,13 +79,14 @@ namespace decision_tree_learning
 				TreeNode leafNode = new TreeNode (GetMajorityTarget (examples));
 				return leafNode;
 			}
-
+				
 			TreeNode currNode = new TreeNode (bestSplitAttribute);
 			if (attributeSet [bestSplitAttribute] == 1)
 				attributeSet.Remove (bestSplitAttribute);
 			else
 				attributeSet [bestSplitAttribute]--;
 				
+			Dictionary<string, double> distribution = new Dictionary<string, double> ();
 			foreach (string attributeValue in bestSets.Keys) {
 				List<DataPoint> subExamples = bestSets [attributeValue];
 				if (subExamples.Count == 0) {
@@ -94,7 +96,9 @@ namespace decision_tree_learning
 					TreeNode childNode = MakeTree (subExamples, attributeSet);
 					currNode.AddChild (attributeValue, childNode);
 				}
+				distribution.Add (attributeValue, (double)bestSets [attributeValue].Count / (double)exampleCount);
 			}
+			currNode.SetDistribution (distribution);
 
 			if (attributeSet.ContainsKey (bestSplitAttribute))
 				attributeSet [bestSplitAttribute]++;
