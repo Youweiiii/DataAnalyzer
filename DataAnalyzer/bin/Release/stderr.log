@@ -1,0 +1,4 @@
+2017-03-20 07:57:04.770 DataAnalyzer[83133:5524020] Failed to connect (DataFileTextField) outlet from (ViewController) to (NSView): missing setter or instance variable
+2017-03-20 07:57:04.770 DataAnalyzer[83133:5524020] Could not connect action, target class ViewController does not respond to -DataFileTextField:
+2017-03-20 07:57:04.771 DataAnalyzer[83133:5524020] Could not connect action, target class ViewController does not respond to -DataFileTextField:
+2017-03-20 07:57:04.771 DataAnalyzer[83133:5524020] Could not connect action, target class ViewController does not respond to -DataFileTextField:

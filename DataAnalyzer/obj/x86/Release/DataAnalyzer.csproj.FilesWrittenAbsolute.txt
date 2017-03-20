@@ -1,0 +1,14 @@
+/Users/youwei/Y4S2/FYP/DataAnalyzer/DataAnalyzer/obj/x86/Release/Xamarin.Mac,Version=v2.0.AssemblyAttribute.cs
+/Users/youwei/Y4S2/FYP/DataAnalyzer/DataAnalyzer/obj/x86/Release/actool/partial-info.plist
+/Users/youwei/Y4S2/FYP/DataAnalyzer/DataAnalyzer/obj/x86/Release/actool/asset-manifest.plist
+/Users/youwei/Y4S2/FYP/DataAnalyzer/DataAnalyzer/obj/x86/Release/actool/bundle/AppIcon.icns
+/Users/youwei/Y4S2/FYP/DataAnalyzer/DataAnalyzer/obj/x86/Release/ibtool-manifests/Main.storyboardc
+/Users/youwei/Y4S2/FYP/DataAnalyzer/DataAnalyzer/obj/x86/Release/ibtool-manifests/link
+/Users/youwei/Y4S2/FYP/DataAnalyzer/DataAnalyzer/obj/x86/Release/ibtool-link/Main.storyboardc/Info.plist
+/Users/youwei/Y4S2/FYP/DataAnalyzer/DataAnalyzer/obj/x86/Release/ibtool-link/Main.storyboardc/MainMenu.nib
+/Users/youwei/Y4S2/FYP/DataAnalyzer/DataAnalyzer/obj/x86/Release/ibtool-link/Main.storyboardc/NSWindowController-B8D-0N-5wS.nib
+/Users/youwei/Y4S2/FYP/DataAnalyzer/DataAnalyzer/obj/x86/Release/ibtool-link/Main.storyboardc/XfG-lQ-9wD-view-m2S-Jp-Qdl.nib
+/Users/youwei/Y4S2/FYP/DataAnalyzer/DataAnalyzer/bin/Release/DataAnalyzer.exe.mdb
+/Users/youwei/Y4S2/FYP/DataAnalyzer/DataAnalyzer/bin/Release/DataAnalyzer.exe
+/Users/youwei/Y4S2/FYP/DataAnalyzer/DataAnalyzer/obj/x86/Release/DataAnalyzer.exe
+/Users/youwei/Y4S2/FYP/DataAnalyzer/DataAnalyzer/obj/x86/Release/DataAnalyzer.exe.mdb

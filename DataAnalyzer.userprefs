@@ -1,0 +1,31 @@
+﻿<Properties StartupConfiguration="{02D1A309-5060-4EAF-97AD-692A9BA1AF3C}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="DataAnalyzer/OutputViewController.cs">
+    <Files>
+      <File FileName="DataAnalyzer/AppDelegate.cs" Line="1" Column="1" />
+      <File FileName="DataAnalyzer/Main.cs" Line="12" Column="25" />
+      <File FileName="DataAnalyzer/ViewController.designer.cs" Line="33" Column="30" />
+      <File FileName="DataAnalyzer/ViewController.cs" Line="110" Column="35" />
+      <File FileName="DataAnalyzer/OutputViewController.cs" Line="37" Column="3" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="DataAnalyzer" expanded="True">
+            <Node name="DataAnalyzer" expanded="True">
+              <Node name="DecisionTreeLearning" expanded="True" />
+              <Node name="OutputViewController.cs" expanded="True" selected="True" />
+              <Node name="ViewController.cs" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.DataAnalyzer PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>
